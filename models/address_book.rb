@@ -7,7 +7,7 @@ class AddressBook
     @entries = []
   end
 
-  def add_entry_name(name, phone_number, email)
+  def add_entry(name, phone_number, email)
 
     index = 0
     entries.each do |entry|
@@ -21,5 +21,4 @@ class AddressBook
     entries.insert(index, Entry.new(name, phone_number, email))
   end
 
-    end
 end
