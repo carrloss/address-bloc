@@ -91,27 +91,18 @@ class MenuController
   def read_csv
   end
 
+
   def view_entry_n
+    print "View entry n: "
+    n = gets.chomp.to_i - 1
 
-    print "View entry n : "
-    n = gets.to_i
-
-    address_book.entries.each_with_index do |entry, index|
-    system "clear"
-
-      if n == index +1
-        puts entry.to_s
-        entry_submenu(entry)
-      else
-        n != index +1
-        system "clear"
-        puts "Sorry, that is not a valid input"
-        main_menu
-      end
-
+    if (n < address_book.entries.count) && (n >= 0)
+      puts 'You wanted to see:'
+      puts address_book.entries[n]
+    else
+      puts "Wrong input"
+      view_entry_n
     end
-
-    system "clear"
   end
 
   def entry_submenu(entry)
