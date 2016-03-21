@@ -60,4 +60,14 @@ class AddressBook
     return nil # if no match is found
   end
 
+  # Assignment work
+  def iterative_search(name)
+    entries.each do |entry|
+      if entry.name == name
+        return entry
+      else nil
+      end
+    end
+  end
+
 end
