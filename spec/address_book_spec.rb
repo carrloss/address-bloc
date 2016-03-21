@@ -55,7 +55,6 @@ RSpec.describe AddressBook do
 
       book.import_from_csv("entries.csv")
       book_size = book.entries.size
-
       expect(book_size).to eq 5
     end
 
