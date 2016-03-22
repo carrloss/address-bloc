@@ -65,9 +65,11 @@ class AddressBook
     entries.each do |entry|
       if entry.name == name
         return entry
-      else nil
       end
+
     end
+    return nil
+
   end
 
 end
